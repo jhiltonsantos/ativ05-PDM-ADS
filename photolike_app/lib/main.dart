@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'photolike_page.dart';
+import 'pages/photolike_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,29 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          primarySwatch: Colors.blue, backgroundColor: Colors.black12),
       home: const PhotoLikePage(),
     );
   }
 }
-
-/*
-Map<String, int> favorite = {
-    'image1': 0,
-    'image2': 0,
-    'image3': 0,
-    'image4': 0,
-    'image5': 0
-  };
-
-  */
-
-  /*
-favorite.forEach((key, value) {
-        if (key == 'image$image') {
-          value++;
-        }
-      });
-
-      */

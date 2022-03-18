@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:photolike_app/pages/addphoto_page.dart';
 
 class PhotoLikePage extends StatefulWidget {
   const PhotoLikePage({Key? key}) : super(key: key);
@@ -68,6 +69,17 @@ class _PhotoLikePageState extends State<PhotoLikePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(221, 39, 39, 39),
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        title: const Text('Photo App'),
+        leading: TextButton(
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => AddPhotoPage()));
+          },
+          child: const Icon(Icons.add),
+        ),
+      ),
       body: SafeArea(
           child: Center(
         child: Column(
